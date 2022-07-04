@@ -12,8 +12,6 @@ public class Infomon {
     }
 
     public boolean isStronger(Infomon enemy){
-        //TODO implement isStronger
-        //TODO start with comparing the types
         int realAttackStat = attackStat;
 
         if(type.contains("fire") && enemy.type.contains("water")){
@@ -39,8 +37,6 @@ public class Infomon {
 //        System.out.println(enemy.getDefenseStat());
 
         if (realAttackStat == enemy.defenseStat){
-            System.out.println("H");
-            //TODO transform
             enemy.transform();
             isStronger(enemy);
         }
@@ -48,41 +44,35 @@ public class Infomon {
         return (realAttackStat > enemy.defenseStat);
     }
 
-    public boolean isWeaker(Infomon enemy){
-        //TODO  the same as is stronger, why should I do it that way??
-        //just negate isStronger?
-        //TODO round up or down or make the enemy stronger instead of weakening your pokemon??
-        int realDefenseStat = getDefenseStat();
-        if(type.contains("fire") && enemy.type.contains("water")){
-            realDefenseStat *= 0.5;
-        }
-        else if(type.contains("fire") && enemy.type.contains("plant")){
-            realDefenseStat *= 2;
-        }
-        else if(type.contains("water") && enemy.type.contains("fire")){
-            realDefenseStat *= 2;
-        }
-        else if(type.contains("water") && enemy.type.contains("plant")){
-            realDefenseStat *= 0.5;
-        }
-        else if(type.contains("plant") && enemy.type.contains("fire")){
-            realDefenseStat *= 0.5;
-        }
-        else if(type.contains("plant") && enemy.type.contains("water")){
-            realDefenseStat *= 2;
-        }
+    public boolean isWeaker(Infomon enemy) {
+        int realAttackStat = attackStat;
 
-        if (realDefenseStat == enemy.attackStat){
-            //TODO transform
+        if (type.contains("fire") && enemy.type.contains("water")) {
+            realAttackStat *= 0.5;
+        } else if (type.contains("fire") && enemy.type.contains("plant")) {
+            realAttackStat *= 2;
+        } else if (type.contains("water") && enemy.type.contains("fire")) {
+            realAttackStat *= 2;
+        } else if (type.contains("water") && enemy.type.contains("plant")) {
+            realAttackStat *= 2;
+        } else if (type.contains("plant") && enemy.type.contains("fire")) {
+            realAttackStat *= 0.5;
+        } else if (type.contains("plant") && enemy.type.contains("water")) {
+            realAttackStat *= 2;
+        }
+//        System.out.println("real " + realAttackStat);
+//        System.out.println(attackStat);
+//        System.out.println(enemy.getDefenseStat());
+
+        if (realAttackStat == enemy.defenseStat) {
             enemy.transform();
             isStronger(enemy);
         }
-        return (realDefenseStat < enemy.attackStat);
+        return (realAttackStat < enemy.defenseStat);
     }
 
     public void transform(){
-        System.out.println("transform!!!!!");
-        //TODO implement transform
+//        System.out.println("transform!!!!!");
         if(type.contains("fire")){
             attackStat += 300;
             defenseStat += 100;

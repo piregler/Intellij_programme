@@ -9,13 +9,13 @@ public class Test {
         Infomon g = new Infomon("Glumanda", "fire", 100, 100);
         Infomon k = new Infomon("Kapardor", "water", 100, 100);
         Trainer t = new Trainer(input);
-//        System.out.println("Can "+ t.name + " catch " + b.name + "?\n"+  t.attemptToCatch(b));
+        System.out.println("Can "+ t.name + " catch " + b.name + "?\n"+  t.attemptToCatch(b));
 //        System.out.println(g.name + " is stronger than "+ b.name + " ?");
 //        System.out.println(g.isStronger(b));
-        System.out.println(k.name + " is stronger than "+ s.name + " ?");
+        System.out.println(k.name + " is stronger than "+ s.name + "?");
         System.out.println(k.isStronger(s));
-        System.out.println(s.getDefenseStat());
-        System.out.println(s.getAttackStat());
-        System.out.println(k.getAttackStat());
+        System.out.println("Schiggy defense: " + s.getDefenseStat());
+        System.out.println("Schiggy attack: " + s.getAttackStat());
+        System.out.println("is " + g.name + " weaker than " + b.name + " " + g.isWeaker(b));
     }
 }
