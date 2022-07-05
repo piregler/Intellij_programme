@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Infomon {
     String name;
     String type;
@@ -14,22 +16,17 @@ public class Infomon {
     public boolean isStronger(Infomon enemy){
         int realAttackStat = attackStat;
 
-        if(type.contains("fire") && enemy.type.contains("water")){
+        if (Objects.equals(type, "fire") && Objects.equals(enemy.type, "water")) {
             realAttackStat *= 0.5;
-        }
-        else if(type.contains("fire") && enemy.type.contains("plant")){
+        } else if (Objects.equals(type, "fire") && Objects.equals(enemy.type, "plant"))  {
             realAttackStat *= 2;
-        }
-        else if(type.contains("water") && enemy.type.contains("fire")){
+        } else if (Objects.equals(type, "water") && Objects.equals(enemy.type, "fire")) {
             realAttackStat *= 2;
-        }
-        else if(type.contains("water") && enemy.type.contains("plant")){
+        } else if (Objects.equals(type, "water") && Objects.equals(enemy.type, "plant")) {
             realAttackStat *= 2;
-        }
-        else if(type.contains("plant") && enemy.type.contains("fire")){
+        } else if (Objects.equals(type, "plant") && Objects.equals(enemy.type, "fire")) {
             realAttackStat *= 0.5;
-        }
-        else if(type.contains("plant") && enemy.type.contains("water")){
+        } else if (Objects.equals(type, "plant") && Objects.equals(enemy.type, "water")) {
             realAttackStat *= 2;
         }
 //        System.out.println("real " + realAttackStat);
@@ -47,17 +44,17 @@ public class Infomon {
     public boolean isWeaker(Infomon enemy) {
         int realAttackStat = attackStat;
 
-        if (type.contains("fire") && enemy.type.contains("water")) {
+        if (Objects.equals(type, "fire") && Objects.equals(enemy.type, "water")) {
             realAttackStat *= 0.5;
-        } else if (type.contains("fire") && enemy.type.contains("plant")) {
+        } else if (Objects.equals(type, "fire") && Objects.equals(enemy.type, "plant"))  {
             realAttackStat *= 2;
-        } else if (type.contains("water") && enemy.type.contains("fire")) {
+        } else if (Objects.equals(type, "water") && Objects.equals(enemy.type, "fire")) {
             realAttackStat *= 2;
-        } else if (type.contains("water") && enemy.type.contains("plant")) {
+        } else if (Objects.equals(type, "water") && Objects.equals(enemy.type, "plant")) {
             realAttackStat *= 2;
-        } else if (type.contains("plant") && enemy.type.contains("fire")) {
+        } else if (Objects.equals(type, "plant") && Objects.equals(enemy.type, "fire")) {
             realAttackStat *= 0.5;
-        } else if (type.contains("plant") && enemy.type.contains("water")) {
+        } else if (Objects.equals(type, "plant") && Objects.equals(enemy.type, "water")) {
             realAttackStat *= 2;
         }
 //        System.out.println("real " + realAttackStat);
