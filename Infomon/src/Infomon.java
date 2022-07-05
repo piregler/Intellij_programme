@@ -1,3 +1,4 @@
+import java.util.Objects;
 public class Infomon {
     String name;
     String type;
@@ -49,7 +50,17 @@ public class Infomon {
 
         if (type.contains("fire") && enemy.type.contains("water")) {
             realAttackStat *= 0.5;
-        } else if (type.contains("fire") && enemy.type.contains("plant")) {
+            
+            
+         // Todo Objects.equals instead of contains !!!!!!
+            //!!!
+            //!,!!,!
+            /////!!!!
+            ////!!
+            ////!!
+            
+            
+        } else if (Objects.equals(type, "fire") && Objects.equals(enemy.type, "plant")) 
             realAttackStat *= 2;
         } else if (type.contains("water") && enemy.type.contains("fire")) {
             realAttackStat *= 2;
