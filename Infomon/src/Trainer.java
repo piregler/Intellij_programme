@@ -17,7 +17,7 @@ public class Trainer {
 
     boolean attemptToCatch(Infomon infomon){
         int trainerPoints = 0;
-        if (infomon.getType().contains("plant")){
+        if (infomon.getType().contains("grass")){
             for(int i = 0; i < name.length(); i++){
                 if (((name.charAt(i) >= 'A' && name.charAt(i) <= 'I') || (name.charAt(i) >= 'a' && name.charAt(i) <= 'i'))){
                     trainerPoints++;

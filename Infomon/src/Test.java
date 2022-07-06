@@ -5,7 +5,7 @@ public class Test {
         System.out.println("Please input trainer name: ");
         String input = in.nextLine();
         Infomon s = new Infomon("Schiggy", "water", 100, 100);
-        Infomon b = new Infomon("Bisasam", "plant", 100, 100);
+        Infomon b = new Infomon("Bisasam", "grass", 100, 100);
         Infomon g = new Infomon("Glumanda", "fire", 100, 100);
         Infomon k = new Infomon("Kapardor", "water", 100, 100);
         Trainer t = new Trainer(input);

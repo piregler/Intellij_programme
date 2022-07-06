@@ -18,15 +18,15 @@ public class Infomon {
 
         if (Objects.equals(type, "fire") && Objects.equals(enemy.type, "water")) {
             realAttackStat *= 0.5;
-        } else if (Objects.equals(type, "fire") && Objects.equals(enemy.type, "plant"))  {
+        } else if (Objects.equals(type, "fire") && Objects.equals(enemy.type, "grass"))  {
             realAttackStat *= 2;
         } else if (Objects.equals(type, "water") && Objects.equals(enemy.type, "fire")) {
             realAttackStat *= 2;
-        } else if (Objects.equals(type, "water") && Objects.equals(enemy.type, "plant")) {
+        } else if (Objects.equals(type, "water") && Objects.equals(enemy.type, "grass")) {
             realAttackStat *= 2;
-        } else if (Objects.equals(type, "plant") && Objects.equals(enemy.type, "fire")) {
+        } else if (Objects.equals(type, "grass") && Objects.equals(enemy.type, "fire")) {
             realAttackStat *= 0.5;
-        } else if (Objects.equals(type, "plant") && Objects.equals(enemy.type, "water")) {
+        } else if (Objects.equals(type, "grass") && Objects.equals(enemy.type, "water")) {
             realAttackStat *= 2;
         }
 //        System.out.println("real " + realAttackStat);
@@ -46,15 +46,15 @@ public class Infomon {
 
         if (Objects.equals(type, "fire") && Objects.equals(enemy.type, "water")) {
             realAttackStat *= 0.5;
-        } else if (Objects.equals(type, "fire") && Objects.equals(enemy.type, "plant"))  {
+        } else if (Objects.equals(type, "fire") && Objects.equals(enemy.type, "grass"))  {
             realAttackStat *= 2;
         } else if (Objects.equals(type, "water") && Objects.equals(enemy.type, "fire")) {
             realAttackStat *= 2;
-        } else if (Objects.equals(type, "water") && Objects.equals(enemy.type, "plant")) {
+        } else if (Objects.equals(type, "water") && Objects.equals(enemy.type, "grass")) {
             realAttackStat *= 2;
-        } else if (Objects.equals(type, "plant") && Objects.equals(enemy.type, "fire")) {
+        } else if (Objects.equals(type, "grass") && Objects.equals(enemy.type, "fire")) {
             realAttackStat *= 0.5;
-        } else if (Objects.equals(type, "plant") && Objects.equals(enemy.type, "water")) {
+        } else if (Objects.equals(type, "grass") && Objects.equals(enemy.type, "water")) {
             realAttackStat *= 2;
         }
 //        System.out.println("real " + realAttackStat);
@@ -78,7 +78,7 @@ public class Infomon {
             attackStat += 200;
             defenseStat += 200;
         }
-        else if(Objects.equals(type, "plant")){
+        else if(Objects.equals(type, "grass")){
             attackStat += 100;
             defenseStat += 300;
         }
