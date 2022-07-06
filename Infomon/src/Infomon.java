@@ -70,15 +70,15 @@ public class Infomon {
 
     public void transform(){
 //        System.out.println("transform!!!!!");
-        if(type.contains("fire")){
+        if(Objects.equals(type, "fire")){
             attackStat += 300;
             defenseStat += 100;
         }
-        else if(type.contains("water")) {
+        else if(Objects.equals(type, "water")) {
             attackStat += 200;
             defenseStat += 200;
         }
-        else{
+        else if(Objects.equals(type, "plant")){
             attackStat += 100;
             defenseStat += 300;
         }
