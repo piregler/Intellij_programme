@@ -82,8 +82,6 @@ public class Infomon {
             attackStat += 100;
             defenseStat += 300;
         }
-
-
     }
 
     public String getType() {

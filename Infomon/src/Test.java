@@ -17,5 +17,6 @@ public class Test {
         System.out.println("Schiggy defense: " + s.getDefenseStat());
         System.out.println("Schiggy attack: " + s.getAttackStat());
         System.out.println("is " + g.name + " weaker than " + b.name + " " + g.isWeaker(b));
+        in.close();
     }
 }
