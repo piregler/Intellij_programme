@@ -63,7 +63,7 @@ public class Infomon {
 
         if (realAttackStat == enemy.defenseStat) {
             enemy.transform();
-            isStronger(enemy);
+            isWeaker(enemy);
         }
         return (realAttackStat < enemy.defenseStat);
     }
@@ -75,12 +75,12 @@ public class Infomon {
             defenseStat += 100;
         }
         else if(Objects.equals(type, "water")) {
-            attackStat += 200;
-            defenseStat += 200;
-        }
-        else if(Objects.equals(type, "grass")){
             attackStat += 100;
             defenseStat += 300;
+        }
+        else if(Objects.equals(type, "grass")){
+            attackStat += 200;
+            defenseStat += 200;
         }
     }
 
